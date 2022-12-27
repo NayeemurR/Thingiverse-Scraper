@@ -4,7 +4,7 @@ import json
 url = "https://api.thingiverse.com/search/"
 querystring = {"sort": "popular"}
 headers = {
-    "Authorization": "Bearer fe9995c480597be8a0b32a50ec9423c3"
+    "Authorization": "Bearer *****"
     }
 
 response = requests.request("GET", url, headers=headers, params=querystring)
@@ -23,7 +23,7 @@ for name in item_ids:
     url = f"https://api.thingiverse.com/things/files/{item_ids[name]}"
     querystring = {}
     headers = {
-        "Authorization": "Bearer fe9995c480597be8a0b32a50ec9423c3"
+        "Authorization": "Bearer *****"
     }
     response = requests.request("GET", url, headers=headers, params=querystring)
     response = json.loads(response.text)
